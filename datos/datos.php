@@ -1,0 +1,18 @@
+<?php
+	require_once(ACCESO."/Datos_clsConexion.php");
+	require_once(ACCESO."/Datos_clsUsuario.php");
+	require_once(ACCESO."/Datos_clsTipoplanilla.php");
+	require_once(ACCESO."/Datos_clsAfp.php");
+	require_once(ACCESO."/Datos_clsEmpleador.php");
+	require_once(ACCESO."/Datos_clsBanco.php");
+	require_once(ACCESO."/Datos_clsTipotrabajador.php");
+	require_once(ACCESO."/Datos_clsCargo.php");
+	require_once(ACCESO."/Datos_clsConfiguracion.php");
+	require_once(ACCESO."/Datos_clsTrabajador.php");
+	require_once(ACCESO."/Datos_clsTablas.php");
+	require_once(ACCESO."/Datos_clsCreacion.php");
+	require_once(ACCESO."/Datos_clsDescuento.php");
+	require_once(ACCESO."/Datos_clsPlanilla.php");
+	require_once(ACCESO."/Datos_clsAbono.php");
+	require_once(ACCESO."/Datos_clsLiquidacion.php");
+?>

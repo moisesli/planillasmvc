@@ -1,0 +1,18 @@
+<?php
+	require_once(ACCESO."/datos.php");
+	require_once(LOGICA."/Negocio_clsUsuario.php");
+	require_once(LOGICA."/Negocio_clsTipoplanilla.php");
+	require_once(LOGICA."/Negocio_clsAfp.php");
+	require_once(LOGICA."/Negocio_clsEmpleador.php");
+	require_once(LOGICA."/Negocio_clsBanco.php");
+	require_once(LOGICA."/Negocio_clsTipotrabajador.php");
+	require_once(LOGICA."/Negocio_clsCargo.php");
+	require_once(LOGICA."/Negocio_clsConfiguracion.php");
+	require_once(LOGICA."/Negocio_clsTrabajador.php");
+	require_once(LOGICA."/Negocio_clsTablas.php");
+	require_once(LOGICA."/Negocio_clsCreacion.php");
+	require_once(LOGICA."/Negocio_clsDescuento.php");
+	require_once(LOGICA."/Negocio_clsPlanilla.php");
+	require_once(LOGICA."/Negocio_clsAbono.php");
+	require_once(LOGICA."/Negocio_clsLiquidacion.php");
+?>

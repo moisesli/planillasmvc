@@ -1,0 +1,126 @@
+.titulo{
+	font-family:sans-serif;
+	color:#000000;	
+	font-size:10px;	
+}
+.titulo1{
+	font-family:sans-serif;
+	color:#000000;
+	font-weight:bold;	
+	font-size:14px;	
+}
+.titulo2{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-weight:bold;	
+	font-size:9px;	
+	text-align:center;
+}
+.titulo222{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;
+	font-weight:bold;	
+	font-size:14px;	
+}
+.titulo3{
+	font-weight:bold;
+	font-family:sans-serif;
+	color:#000000;	
+	font-size:10px;	
+}
+.titulo4{
+	font-family:sans-serif;
+	color:#000000;	
+	font-size:10px;	
+}
+.titulo4a{
+border-bottom:groove;
+	font-weight:bold;
+	font-family:sans-serif;
+	color:#000000;	
+	font-size:10px;	
+}
+
+.texto{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:center;
+}
+.texto1{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:left;
+}
+.texto111{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:center;
+}
+.texto2{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:right;	
+}
+.texto22{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:right;	
+	font-weight:bold;
+}
+.textoboleta1{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:10px;	
+	text-align:left;
+}
+.textoboleta2{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:9px;	
+	text-align:left;
+	font-weight:bold;
+}
+.textoboleta2titulo{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:10px;	
+	text-align:center;
+	font-weight:bold;
+}
+.textoboleta2a{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:10px;	
+	text-align:right;
+	font-weight:bold;
+}
+.titulo1{
+	font-family:sans-serif;
+	color:#000000;
+	font-weight:bold;	
+	font-size:9px;	
+}
+.textoboleta2b{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:left;
+}
+.textoboleta2c{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:right;
+}
+.textoboleta2cc{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;	
+	font-size:8px;	
+	text-align:right;
+	font-weight:bold;
+}
