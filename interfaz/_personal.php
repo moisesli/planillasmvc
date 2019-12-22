@@ -21,7 +21,7 @@
         <div class="container-fluid" id="app">
 
             <!-- Title -->
-            <div class="row">
+            <div class="row pt-4">
                 <div class="col">
 
                     <h3 class="display-4 text-center" style="font-size: 38px">Planilla Unica de <?php echo $creacion['planilla'] ?></h3>
@@ -61,7 +61,7 @@
 
 
             <!-- Tabla -->
-            <table class="table table-bordered table-sm table-responsive table-hover tabla">
+            <table class="table table-bordered table-sm table-responsive table-hover tabla" id="table1">
                 <thead class="thead-light">
 
                 <!-- Cabezera uno table -->
@@ -228,5 +228,21 @@
 <!--  })-->
 <!--</script>-->
 <?php include "./planillas/_js.php" ?>
+<script>
+  $(function() {
+    //The passed argument has to be at least a empty object or a object with your desired options
+    $('#table1').overlayScrollbars({
+      scrollbars : {
+        visibility       : "auto",
+        autoHide         : "leave",
+        autoHideDelay    : 400,
+        dragScrolling    : true,
+        clickScrolling   : false,
+        touchSupport     : true,
+        snapHandle       : false
+      }
+    });
+  });
+</script>
 </body>
 </html>

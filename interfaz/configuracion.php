@@ -53,7 +53,7 @@
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body p-0">
-                <table class="table table-condensed">
+                <table class="table table-condensed table-responsive">
                   <thead>
                     <tr>
                       <th>Unidad Eject.</th>
@@ -125,6 +125,11 @@
 <?php
 	require_once '../libreria/cuerpo/pie1.php';
 ?>
-
+<script>
+  $(function() {
+    //The passed argument has to be at least a empty object or a object with your desired options
+    $('table').overlayScrollbars({ });
+  });
+</script>
 </body>
 </html>

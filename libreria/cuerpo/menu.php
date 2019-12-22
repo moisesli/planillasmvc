@@ -2,7 +2,7 @@
    <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="administrador.php" class="brand-link">
-		<img src="../libreria/dist/img/_milogo1.png" alt="Inicio" class="bbrand-image bimg-circle belevation-5	" style="opacity: .8">
+		<img src="../libreria/dist/img/_milogo1.png" alt="Inicio" class="bbrand-image bimg-circle belevation-5	img-fluid">
       <span class="brand-text font-weight-light"></span>
     </a>
 
@@ -14,27 +14,34 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
           <li class="nav-item">
-            <a href="configuracion.php" class="nav-link">
+            <a href="administrador.php" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
-                Configuracion
-                <span class="right badge badge-danger">Datos</span>
+                Inicio
+                <!--<i class="fas fa-angle-left right"></i>-->
+                <!--<span class="right badge badge-danger">Datos</span>-->
               </p>
             </a>
           </li>
+
+          <!-- Mantenimiento -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Mantenimiento
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">8</span>                
+                <!--<span class="badge badge-info right">8</span>-->
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="periodo.php" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="configuracion.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p>Configuracion</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="periodo.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Periodos</p>
                 </a>
               </li>
@@ -83,16 +90,19 @@
               
             </ul>
           </li>
+
+          <!-- Procesos -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Procesos
                 <i class="right fas fa-angle-left"></i>
-                <span class="badge badge-info right">6</span>
+                <!--<span class="badge badge-info right">6</span>-->
               </p>
             </a>
             <ul class="nav nav-treeview">
+
               <li class="nav-item">
                 <a href="trabajador.php" class="nav-link">
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -132,25 +142,24 @@
               
             </ul>
           </li>
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-print"></i>
               <p>
                 Reportes
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">8</span>
+                <!--<span class="badge badge-info right">8</span>-->
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="planillaimprimir.php" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="planillaimprimir.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Reporte de Planillas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="boletaimprimir.php" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="boletaimprimir.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Boletas de Pagos</p>
                 </a>
               </li>
@@ -198,19 +207,17 @@
               <p>
                 Utilidades
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                <!--<span class="badge badge-info right">2</span>-->
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="usuario.php" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="usuario.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Control de Usuarios</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../manual/manual.pdf" class="nav-link" target="_blank">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../manual/manual.pdf" class="nav-link" target="_blank">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Manual de Usuario</p>
                 </a>
               </li>
@@ -222,21 +229,23 @@
               <p>
                 Sistema
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">1</span>
+                <!--<span class="badge badge-info right">1</span>-->
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../index.php" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../index.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Salir del Sistema</p>
                 </a>
               </li>
             </ul>
           </li>
         </ul>
-			<div style="color:#A0DCEF; font-size:18px; font-weight:bold;" align="center"><?php echo TITULO; ?></div>
-			<div align="center" style="color:#E4C705; font-size:18px; font-weight:bold;"><?php echo date('d-m-Y'); ?></div>
+        <div class="row align-items-end">
+          <div class="col">
+            <img src="../libreria/dist/img/personal2020.png" alt="" class="img-fluid pt-5">
+          </div>
+        </div>
     </div>
 
       </nav>
