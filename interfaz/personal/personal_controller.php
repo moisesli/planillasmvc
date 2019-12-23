@@ -32,9 +32,16 @@ if ($option == 'savefuentes'){
     echo json_encode($data['fuente']);
 }
 
+//Update Edit Fuente
+if ($option == 'editsavefuentes'){
+  $data = json_decode(file_get_contents("php://input"), true);
+  $conn->query("update trabajador_fuentes set codigo='{$data['fuente']['codigo']}', nombre='{$data['fuente']['nombre']}' where id={$data['fuente']['id']}");
+  echo json_encode($data['fuente']);
+}
+
 //Update Edit Actividad
-if ($option == 'editsaveactividad'){
+if ($option == 'editsaveactividades'){
     $data = json_decode(file_get_contents("php://input"), true);
-    $conn->query("update into trabajador_actividades set codigo='{$data['actividad']['codigo']}', nombre='{$data['actividad']['nombre']}' where id={$data['actividad']['id']}");
+    $conn->query("update trabajador_actividades set codigo='{$data['actividad']['codigo']}', nombre='{$data['actividad']['nombre']}' where id={$data['actividad']['id']}");
     echo json_encode($data['actividad']);
 }

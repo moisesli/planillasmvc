@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2019 at 08:48 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: Dec 23, 2019 at 05:08 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 5.6.39
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -14792,10 +14792,10 @@ CREATE TABLE `trabajador` (
 --
 
 INSERT INTO `trabajador` (`codigo`, `codempresa`, `apellidos`, `apellidos2`, `nombres`, `coddocu`, `numdocu`, `direccion`, `sexo`, `fnaci`, `nacionalidad`, `email`, `educacion`, `foto`, `activo`, `tipo`, `contrato`, `fini`, `ffin`, `cargo`, `sueldo`, `autogenerado`, `asignacion`, `onp`, `afp`, `cupps`, `banco`, `cuenta`, `judicial1`, `monto1`, `judicial2`, `monto2`, `usuario`, `clave`, `essalud`, `domiciliado`, `via`, `vianombre`, `vianum`, `viainterior`, `zona`, `zonanombre`, `zonareferencia`, `ubigeo`, `regimen`, `ocupacion`, `discapacidad`, `tipocontrato`, `sujeto1`, `sujeto2`, `sujeto3`, `sindicato`, `periodicidad`, `situacion`, `quinta`, `especial`, `tipopago`, `categoria`, `convenio`, `instituto`, `carrera`, `anual`, `flujo`, `cts`, `cafae`, `scrt`, `escolar`, `vacaciones`, `fuentes_id`, `actividades_id`) VALUES
-(1, 1, 'ZOLIS', 'ZOLIS', 'JUAN ', 'DNI', '121212121', 'ESPERANZA', 'MASCULINO', '1975-02-25', '', 'sistemas@hotmail.com', '', '330px-Felipe_Pardo_y_Aliaga.JPG', 'S', 'P1_EMPLEADOS', '123456', '2019-04-15', '2019-10-31', 'JEFE', '1200.00', 'A14252141', 'S', 'N', 'INTEGRA', '1234556', 'BANCO DE LA NACION', '04250026272', '', '0.00', '', '0.00', 'ZAPATA', '16750496', '1', '1', '', '', '', '', '', '', '', '', '', '217002', '0', '', '1', '1', '0', '0', '1', '0', 'N', '0', '', '', '0', '', '', '', 'S', 'N', 'N', 'N', 'N', 'N', 2, 2),
+(1, 1, 'ZOLIS', 'ZOLIS', 'JUAN ', 'DNI', '121212121', 'ESPERANZA', 'MASCULINO', '1975-02-25', '', 'sistemas@hotmail.com', '', '330px-Felipe_Pardo_y_Aliaga.JPG', 'S', 'P1_EMPLEADOS', '123456', '2019-04-15', '2019-10-31', 'JEFE', '1200.00', 'A14252141', 'S', 'N', 'INTEGRA', '1234556', 'BANCO DE LA NACION', '04250026272', '', '0.00', '', '0.00', 'ZAPATA', '16750496', '1', '1', '', '', '', '', '', '', '', '', '', '217002', '0', '', '1', '1', '0', '0', '1', '0', 'N', '0', '', '', '0', '', '', '', 'S', 'N', 'N', 'N', 'N', 'N', 1, 2),
 (9, 1, 'MENDOZA', 'DIAZ ', 'JOSE LUIS', 'DNI', '333333333', 'ssss', '', '0000-00-00', '', '', '', '', 'S', 'P1_EMPLEADOS', '232323', '2019-01-01', '2019-12-31', 'JEFE', '1250.00', '2323232323', 'N', 'S', '', '', '', '', '', '0.00', '', '0.00', '', '', '', '0', '', '', '', '', '', '', '', '', '', '', '0', '', '0', '0', '0', '0', '', '', 'N', '', '', '', '', '', '', '', 'N', 'N', 'N', 'N', 'N', 'N', 1, 1),
 (10, 1, 'PEREZ', 'BUSTAMANTE', 'JUAN', 'DNI', '3423232323', 'sdsdsd', 'MASCULINO', '0000-00-00', '', '', '', '', 'N', 'P1_EMPLEADOS', '123456', '2019-01-01', '2019-12-31', 'JEFE', '950.00', 'ADDA16546464A', 'N', 'S', '', '', '', '', '', '0.00', '', '0.00', '', '', '', '0', '', '', '', '', '', '', '', '', '', '', '0', '', '0', '0', '0', '0', '', '', 'N', '', '', '', '', '', '', '', 'N', 'N', 'N', 'N', 'N', 'S', 1, 1),
-(8, 1, 'TRIFUL', 'JARA', 'MARA ', 'DNI', '16791772', 'URUGUAY', 'FEMENINO', '1977-11-19', '', 'marita@hotmail.com', '', '', 'S', 'P1_EMPLEADOS', '123456', '2019-01-01', '2019-12-31', 'JEFE', '980.00', 'ADDA16546464A', 'N', 'S', '', '', '', '', 'aaaaaa', '100.00', 'bbbbb', '100.00', 'MARA', '', '1', '1', '03', 'CHINCHIPE', '275', '', '', 'SAN ANTONIO', 'AAAA', '', '18', '844001', '0', '', '0', '0', '0', '0', '', '', 'N', '', '', '', '', '', '', '', 'N', 'N', 'N', 'N', 'N', 'N', 2, 2),
+(8, 1, 'TRIFUL', 'JARA', 'MARA ', 'DNI', '16791772', 'URUGUAY', 'FEMENINO', '1977-11-19', '', 'marita@hotmail.com', '', '', 'S', 'P1_EMPLEADOS', '123456', '2019-01-01', '2019-12-31', 'JEFE', '980.00', 'ADDA16546464A', 'N', 'S', '', '', '', '', 'aaaaaa', '100.00', 'bbbbb', '100.00', 'MARA', '', '1', '1', '03', 'CHINCHIPE', '275', '', '', 'SAN ANTONIO', 'AAAA', '', '18', '844001', '0', '', '0', '0', '0', '0', '', '', 'N', '', '', '', '', '', '', '', 'N', 'N', 'N', 'N', 'N', 'N', 1, 2),
 (12, 1, 'Linares', 'Oscco', 'Abraham Moises', 'DNI', '42516253', 'cm 40 lt 15 mz 213', 'MASCULINO', '2019-02-06', '', 'elnaufrago2009@gmail.com', '', '', 'S', 'P1_EMPLEADOS', '145', '2019-12-18', '2019-12-19', 'ASISTENTE', '1200.00', '145dsa', 'N', 'S', 'INTEGRA', 'ddasd', 'BANCO DE LA NACION', 'dsada', '', '0.00', '', '0.00', '', '', '0', '0', '', 'dasd', 'dasd', 'sdad', '05', '', '', '', '', '', '0', '', '0', '0', '0', '0', '', '', 'N', '', '', '', '', '', '', '', 'N', 'N', 'N', 'N', 'N', 'N', 2, 2);
 
 -- --------------------------------------------------------
@@ -14816,7 +14816,10 @@ CREATE TABLE `trabajador_actividades` (
 
 INSERT INTO `trabajador_actividades` (`id`, `codigo`, `nombre`) VALUES
 (1, '0044', 'GERENCIA DE DESARROLLO ECONOMICO Y SOCIAL'),
-(2, '0003', 'SUB GERENCIA DE GESTION AMBIENTAL');
+(2, '0003', 'SUB GERENCIA DE GESTION AMBIENTAL'),
+(6, '0045', 'Desarrollo'),
+(7, 'dasd', 'cuarto'),
+(8, '0046', 'nuevoo');
 
 -- --------------------------------------------------------
 
@@ -14836,7 +14839,13 @@ CREATE TABLE `trabajador_fuentes` (
 
 INSERT INTO `trabajador_fuentes` (`id`, `codigo`, `nombre`) VALUES
 (1, '07A', 'FONDO DE COMPENSACION MUNICIPAL'),
-(2, '097', 'RECURSOS DIRECTAMENTE RECAUDADOS');
+(2, '097', 'RECURSOS DIRECTAMENTE RECAUDADOS'),
+(3, 'dasd', 'dasdsad'),
+(4, 'asdad', 'dasd'),
+(5, '098', 'nuevo'),
+(6, '098', 'nuevoooooooo'),
+(7, '098', 'nuevaaaaaaaaaaa'),
+(8, '000', 'nuevecito01');
 
 -- --------------------------------------------------------
 
@@ -15481,13 +15490,13 @@ ALTER TABLE `trabajador`
 -- AUTO_INCREMENT for table `trabajador_actividades`
 --
 ALTER TABLE `trabajador_actividades`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `trabajador_fuentes`
 --
 ALTER TABLE `trabajador_fuentes`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tregistro`

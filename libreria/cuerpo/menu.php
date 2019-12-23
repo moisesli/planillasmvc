@@ -36,6 +36,11 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="fuente_actividad.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p>Fuente Actividad</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="configuracion.php" class="nav-link">                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <p>Configuracion</p>
                 </a>
