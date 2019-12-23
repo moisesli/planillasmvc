@@ -2,32 +2,16 @@
   //  Conexion Bd
   include './sql.php';
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Librerias Import -->
+<?php include "../libreria/cuerpo/cabeza_nueva.php"; ?>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<body class="hold-transition sidebar-mini layout-fixed">
 
-  <!-- FontAwesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
-  <!-- Vue -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-  <title>0016 Concejo Municipal - Planilla de <?php echo $creacion['planilla']; ?> 2019</title>
-
-</head>
 <style>
   .tabla {
     font-size: 11px;
   }
 </style>
-<body>
-
 <!-- Navbar-->
 <?php include "../shared/navbar.php" ?>
 
@@ -42,7 +26,6 @@
       <p class="lead text-center">
         <?php echo $creacion['tipo'].' '.$creacion['mes'].' '.$creacion['periodo'] ?>
       </p>
-
 
       <!--<p class="tabla">
         Actividad : 0003 SUB GERENCIA DE GESTION AMBIENTAL <br>
