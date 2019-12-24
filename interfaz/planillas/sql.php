@@ -395,6 +395,7 @@ foreach ($planillas as $i => $empleado) {
     $planillas[$i]['dni'] = $trabajador['numdocu'];
     $planillas[$i]['nombre'] = $trabajador['apellidos'].' '.$trabajador['apellidos2'].' '.$trabajador['nombres'];
     $planillas[$i]['cargo'] = $trabajador['cargo'];
+    $planillas[$i]['trabajador_afp'] = $trabajador['afp'];
     $planillas[$i]['fuente'] = $trabajador['fuente_codigo'];
     $planillas[$i]['fuente_id'] = $trabajador['fuentes_id'];
     $planillas[$i]['actividad_id'] = $trabajador['actividades_id'];

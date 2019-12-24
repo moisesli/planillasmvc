@@ -45,7 +45,7 @@
                 <div class="card-header">
                   <h3 class="card-title"><?php echo $creacion['tipo'].' '.$creacion['mes'].' '.$creacion['periodo'] ?></h3>
                   <div class="card-tools">
-                    <!--<span class="badge bg-secondary"><i class="fa fa-plus"></i> Agregar</span>-->
+                    <span class="badge bg-secondary"><a href="_print_planilla.php?micodigo=<?php echo $_GET['micodigo']?>" target="_blank"><i class="fa fa-print"></i> Imprimir</a></span>
                   </div>
                 </div>
                 <!-- /.card-header -->
@@ -103,21 +103,21 @@
                       <td>Lab</td>
                         <?php
                         foreach ($ingresos as $ingreso){
-                            echo "<td>".$ingreso['nombre']."</td>";
+                            echo "<td>".substr($ingreso['nombre'],0,5)."</td>";
                         }
                         ?>
                       <td>Otros</td>
-                      <td>Ingresos</td>
-                      <td><?php echo $creacion['afp1'] ?></td>
-                      <td><?php echo $creacion['afp2'] ?></td>
-                      <td><?php echo $creacion['afp3'] ?></td>
+                      <td>Ingre</td>
+                      <td><?php echo substr($creacion['afp1'],0,6) ?></td>
+                      <td><?php echo substr($creacion['afp2'],0,6) ?></td>
+                      <td><?php echo substr($creacion['afp3'],0,6) ?></td>
                       <td><?php echo $creacion['onp'] ?></td>
                       <td>Otros</td>
                       <td>Desctos</td>
                       <td>Pagar</td>
                       <td><?php echo $creacion['essalud'] ?></td>
                       <td><?php echo $creacion['scrtsalud'] ?></td>
-                      <td><?php echo $creacion['scrtpension'] ?></td>
+                      <td><?php echo substr($creacion['scrtpension'],0,5) ?></td>
                     </tr>
                     </thead>
 
@@ -128,7 +128,7 @@
                       <td>{{planilla.nombre}}</td>
                       <td>{{planilla.cargo}}</td>
                       <td>OBR</td>
-                      <td>Prima M</td>
+                      <td>{{planilla.trabajador_afp}}</td>
                       <td>{{planilla.fuente}}</td>
                       <td>{{planilla.dias}}</td>
                       <td v-for="ingreso in planilla.ingresos">
@@ -158,18 +158,18 @@
                     <tr class="bg-light">
                       <td colspan="8" class="text-center"><strong>TOTAL IMPORTE</strong></td>
                       <!-- Ingresos array -->
-                      <td v-for="ingreso in ingresosTotalesArray">{{ingreso}}</td>
-                      <td>{{ingresosOtrosTotales}}</td>
-                      <td>{{ingresosTotal}}</td>
+                      <td v-for="ingreso in ingresosTotalesArray">{{ingreso | digito}}</td>
+                      <td>{{ingresosOtrosTotales | digito}}</td>
+                      <td>{{ingresosTotal | digito}}</td>
                       <!-- Descuentos Array-->
-                      <td v-for="descuento in descuentosArrayTotal">{{descuento}}</td>
-                      <td>{{descuentosOtrosTotal}}</td>
-                      <td>{{descuentosTotal}}</td>
-                      <td>{{neto_total}}</td>
+                      <td v-for="descuento in descuentosArrayTotal">{{descuento | digito}}</td>
+                      <td>{{descuentosOtrosTotal | digito}}</td>
+                      <td>{{descuentosTotal | digito}}</td>
+                      <td>{{neto_total | digito}}</td>
                       <!-- Aportes -->
-                      <td>{{aportes_uno_total}}</td>
-                      <td>{{aportes_dos_total}}</td>
-                      <td>{{aportes_tres_total}}</td>
+                      <td>{{aportes_uno_total | digito}}</td>
+                      <td>{{aportes_dos_total | digito}}</td>
+                      <td>{{aportes_tres_total | digito}}</td>
                     </tr>
 
                   </table>
@@ -182,12 +182,12 @@
                       <table class="table table-sm table-responsive-lg table-hover tabla">
                         <tr class="bg-light"><td colspan="4" class="text-center">AFECTACION PRESUPUESTAL</td></tr>
                         <tr class="bg-light"><td>Fte</td><td>Partida</td><td>Descripcion</td><td class="text-right">Importe</td></tr>
-                        <tr v-for="afectacion in afectacion_presupuestal_array"><td>{{afectacion.fuente}}</td><td>{{afectacion.partida}}</td><td>{{afectacion.concepto}}</td><td class="text-right">{{afectacion.monto}}</td></tr>
-                        <tr><td colspan="3">Total</td><td class="text-right">{{conceptos_remunerativos_total}}</td></tr>
+                        <tr v-for="afectacion in afectacion_presupuestal_array"><td>{{afectacion.fuente}}</td><td>{{afectacion.partida}}</td><td>{{afectacion.concepto}}</td><td class="text-right">{{afectacion.monto | digito}}</td></tr>
+                        <tr><td colspan="3">Total</td><td class="text-right">{{conceptos_remunerativos_total | digito}}</td></tr>
                         <tr class="bg-light"><td colspan="4" class="text-center">APORTES SPP - AFPS</td></tr>
                         <tr class="bg-light"><td>Afp</td><td>Aporte</td><td>Comision</td><td class="text-right">Total</td></tr>
-                        <tr><td>Afp Profuturo</td><td>34.34</td><td>6.94</td><td>41.28</td></tr>
-                        <tr><td>Total</td><td>34.34</td><td>6.94</td><td>41.28</td></tr>
+                        <tr v-for="aporte in aportes_array_total" v-if="aporte.total !=0"><td>{{aporte.afp}}</td><td>{{aporte.monto | digito}}</td><td>{{aporte.comision | digito}}</td><td class="text-right">{{aporte.total  | digito}}</td></tr>
+                        <tr><td>Total</td><td>{{descuentosArrayTotal[0] | digito}}</td><td>{{descuentosArrayTotal[1]+descuentosArrayTotal[2] | digito}}</td><td class="text-right">{{descuentosArrayTotal[0] + descuentosArrayTotal[1]+descuentosArrayTotal[2]| digito}}</td></tr>
                       </table>
                     </div>
 
@@ -196,8 +196,8 @@
                       <table class="table table-sm table-responsive-lg table-hover tabla">
                         <tr class="bg-light"><td colspan="2" class="text-center">CONCEPTOS REMUNERATIVOS</td></tr>
                         <tr class="bg-light"><td>Remuneracion</td><td class="text-right">Importe</td></tr>
-                        <tr v-for="concepto in conceptos_remunerativos_array" v-if="concepto.monto !=0"><td>{{concepto.nombre}}</td><td class="text-right">{{concepto.monto}}</td></tr>
-                        <tr><td>Total</td><td class="text-right">{{conceptos_remunerativos_total}}</td></tr>
+                        <tr v-for="concepto in conceptos_remunerativos_array" v-if="concepto.monto !=0"><td>{{concepto.nombre}}</td><td class="text-right">{{concepto.monto | digito}}</td></tr>
+                        <tr><td>Total</td><td class="text-right">{{conceptos_remunerativos_total | digito}}</td></tr>
                       </table>
                     </div>
 
@@ -206,8 +206,8 @@
                       <table class="table table-sm table-responsive-lg table-hover tabla">
                         <tr class="bg-light"><td colspan="2" class="text-center">DESCUENTOS Y/O RETENCIONES</td></tr>
                         <tr class="bg-light"><td>Concepto</td><td class="text-right">Importe</td></tr>
-                        <tr v-for="descuento in array_descuento_retenciones" v-if="descuento.monto != 0"><td>{{descuento.nombre}}</td><td class="text-right">{{descuento.monto}}</td></tr>
-                        <tr><td>Total</td><td class="text-right">{{descuentosTotal}}</td></tr>
+                        <tr v-for="descuento in array_descuento_retenciones" v-if="descuento.monto != 0"><td>{{descuento.nombre}}</td><td class="text-right">{{descuento.monto | digito}}</td></tr>
+                        <tr><td>Total</td><td class="text-right">{{descuentosTotal | digito}}</td></tr>
                       </table>
                     </div>
 
@@ -215,9 +215,9 @@
                     <div class="col">
                       <table class="table table-sm table-responsive-lg table-hover tabla">
                         <tr class="bg-light"><td colspan="2" class="text-center">RESUMEN</td></tr>
-                        <tr class="bg-light"><td>Total Remuneracion</td><td class="text-right">{{ingresosTotal}}</td></tr>
-                        <tr><td>Total Descuentos</td><td class="text-right">{{descuentosTotal}}</td></tr>
-                        <tr><td><strong>Neto a Pagar</strong></td><td class="text-right"><strong>{{neto_total}}</strong></td></tr>
+                        <tr class="bg-light"><td>Total Remuneracion</td><td class="text-right">{{ingresosTotal | digito}}</td></tr>
+                        <tr><td>Total Descuentos</td><td class="text-right">{{descuentosTotal | digito}}</td></tr>
+                        <tr><td><strong>Neto a Pagar</strong></td><td class="text-right"><strong>{{neto_total | digito}}</strong></td></tr>
                       </table>
                     </div>
                   </div>

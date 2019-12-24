@@ -1,4 +1,13 @@
 <script>
+  Vue.filter('truncate', function (text, length) {
+    return text.substring(0, length);
+  });
+
+  Vue.filter('digito', function (num) {
+    var t = Math.pow(10, 2);
+    return (Math.round((num * t) + (2>0?1:0)*(Math.sign(num) * (10 / Math.pow(100, 2)))) / t).toFixed(2);
+  });
+
   var app = new Vue({
     el: '#app',
     data: {
@@ -246,12 +255,51 @@
           {fuente: '18',    partida: '2.1.1.8.1.1', concepto: 'OBREROS PERMANENTES',   monto: this.ingresosTotal}
         ]
         return afectacion;
-      }
+      },
+      aportes_array_total: function () {
+        var aportes = [
+          {afp: 'INTEGRA', monto: 0, comision: 0, total: 0},
+          {afp: 'PRIMA', monto: 0, comision: 0, total: 0},
+          {afp: 'PROFUTURO', monto: 0, comision: 0, total: 0},
+          {afp: 'HABITAD', monto: 0, comision: 0, total: 0},
+          {afp: 'HORIZONTE', monto: 0, comision: 0, total: 0},
+          {afp: 'OTRO', monto: 0, comision: 0, total: 0}
+        ];
+        this.filtrarPlanillas.forEach(planilla => {
+          if (planilla.trabajador_afp == "INTEGRA"){
+            aportes[0].monto += parseFloat(planilla.afp1);
+            aportes[0].comision +=  parseFloat(planilla.afp2) + parseFloat(planilla.afp3);
+            aportes[0].total += aportes[0].monto + aportes[0].comision;
+          } else if (planilla.trabajador_afp == "PRIMA"){
+            aportes[1].monto += parseFloat(planilla.afp1);
+            aportes[1].comision += parseFloat(planilla.afp2) + parseFloat(planilla.afp3);
+            aportes[1].total += aportes[0].monto + aportes[0].comision;
+          } else if (planilla.trabajador_afp == "PROFUTURO"){
+            aportes[2].monto += parseFloat(planilla.afp1);
+            aportes[2].comision += parseFloat(planilla.afp2) + parseFloat(planilla.afp3);
+            aportes[2].total += aportes[0].monto + aportes[0].comision;
+          } else if (planilla.trabajador_afp == "HABITAD"){
+            aportes[3].monto += parseFloat(planilla.afp1);
+            aportes[3].comision += parseFloat(planilla.afp2) + parseFloat(planilla.afp3);
+            aportes[3].total += aportes[0].monto + aportes[0].comision;
+          } else if (planilla.trabajador_afp == "HORIZONTE"){
+            aportes[4].monto += parseFloat(planilla.afp1);
+            aportes[4].comision += parseFloat(planilla.afp2) + parseFloat(planilla.afp3);
+            aportes[4].total += aportes[0].monto + aportes[0].comision;
+          } else if (planilla.trabajador_afp == "HORIZONTE"){
+            aportes[5].monto += parseFloat(planilla.afp1);
+            aportes[5].comision += parseFloat(planilla.afp2) + parseFloat(planilla.afp3);
+            aportes[5].total += aportes[0].monto + aportes[0].comision;
+          }
+        });
+        return aportes;
+      },
+
     },
     mounted() {
       console.log(this.planillas)
-      console.log(this.afectacion_presupuestal_array)
-      // console.log(this.array_fuentes);
+      console.log(this.aportes_array_total)
+      // console.log(this.redondear(14.5644));
       // console.log(this.array_actividades);
     }
   })
